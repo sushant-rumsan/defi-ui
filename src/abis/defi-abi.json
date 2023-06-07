@@ -1,0 +1,303 @@
+[
+  {
+    "type": "constructor",
+    "name": "",
+    "inputs": [],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "borrowerData",
+    "inputs": [
+      {
+        "type": "address",
+        "name": "",
+        "internalType": "address"
+      }
+    ],
+    "outputs": [
+      {
+        "type": "uint256",
+        "name": "borrowedAmount",
+        "internalType": "uint256"
+      },
+      {
+        "type": "uint256",
+        "name": "collateralAmount",
+        "internalType": "uint256"
+      },
+      {
+        "type": "uint256",
+        "name": "borrowedDate",
+        "internalType": "uint256"
+      },
+      {
+        "type": "uint256",
+        "name": "interestToPay",
+        "internalType": "uint256"
+      },
+      {
+        "type": "uint256",
+        "name": "rateOfEthWhenBorrowed",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "borrowerDetail",
+    "inputs": [],
+    "outputs": [
+      {
+        "type": "uint256",
+        "name": "borrowedAmount",
+        "internalType": "uint256"
+      },
+      {
+        "type": "uint256",
+        "name": "collateralAmount",
+        "internalType": "uint256"
+      },
+      {
+        "type": "uint256",
+        "name": "borrowedDate",
+        "internalType": "uint256"
+      },
+      {
+        "type": "uint256",
+        "name": "interestToPay",
+        "internalType": "uint256"
+      },
+      {
+        "type": "uint256",
+        "name": "rateOfEthWhenBorrowed",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "borrowerIDArray",
+    "inputs": [
+      {
+        "type": "uint256",
+        "name": "",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [
+      {
+        "type": "address",
+        "name": "",
+        "internalType": "address"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "calculateInterestAmount",
+    "inputs": [],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "claimInterest",
+    "inputs": [],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "depositEthBorrowUSDC",
+    "inputs": [
+      {
+        "type": "uint256",
+        "name": "amount",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "payable"
+  },
+  {
+    "type": "function",
+    "name": "depositUSDCEarnInterest",
+    "inputs": [
+      {
+        "type": "uint256",
+        "name": "amount",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "depositedUSDCOfAddress",
+    "inputs": [
+      {
+        "type": "address",
+        "name": "addressReceipient",
+        "internalType": "address"
+      }
+    ],
+    "outputs": [
+      {
+        "type": "uint256",
+        "name": "",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "distributeInterest",
+    "inputs": [],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "liquidate",
+    "inputs": [],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "payInterest",
+    "inputs": [
+      {
+        "type": "uint256",
+        "name": "amount",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "repayUSDC",
+    "inputs": [
+      {
+        "type": "uint256",
+        "name": "amount",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "stakerData",
+    "inputs": [
+      {
+        "type": "address",
+        "name": "",
+        "internalType": "address"
+      }
+    ],
+    "outputs": [
+      {
+        "type": "uint256",
+        "name": "stakingAmount",
+        "internalType": "uint256"
+      },
+      {
+        "type": "uint256",
+        "name": "stakedDate",
+        "internalType": "uint256"
+      },
+      {
+        "type": "uint256",
+        "name": "collectedInterest",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "stakerDetail",
+    "inputs": [],
+    "outputs": [
+      {
+        "type": "uint256",
+        "name": "stakingAmount",
+        "internalType": "uint256"
+      },
+      {
+        "type": "uint256",
+        "name": "stakedDate",
+        "internalType": "uint256"
+      },
+      {
+        "type": "uint256",
+        "name": "collectedInterest",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "stakerId",
+    "inputs": [
+      {
+        "type": "uint256",
+        "name": "",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [
+      {
+        "type": "address",
+        "name": "",
+        "internalType": "address"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "viewTotalCollectedInterest",
+    "inputs": [],
+    "outputs": [
+      {
+        "type": "uint256",
+        "name": "",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "viewTotalStakedAmount",
+    "inputs": [],
+    "outputs": [
+      {
+        "type": "uint256",
+        "name": "",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "withdrawUSDC",
+    "inputs": [],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  }
+]

@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap');
+
+.App {
+  text-align: center;
+  font-family: "Poppins";
+  background: whitesmoke;
+}
+
+
+
+.Banner {
+  height: 45vh;
+  display: flex;
+  border: 0;
+  margin-bottom: 20px;
+}
+
+.Banner-left{
+  display: flex;
+  flex-flow: column nowrap;
+  margin-top: 70px;
+  width: 60%;
+  height: 100%;
+  padding-left: 80px;
+  align-items: baseline;
+}
+
+.Banner-right {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  justify-content: center;
+  padding-right: 40px;
+  text-align: right;
+  margin-top: 20px;
+}
+
+.bannerh1 {
+  font-family: Helvetica, sans-serif;
+  font-size: xx-large;
+  text-align: left;
+  margin: 2px;
+}
+
+.line2 {
+  font-family: Helvetica, sans-serif;
+  font-size: 30px;
+  text-align: left;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+.line3 {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  margin: 20px;
+  margin-left: 0px;
+  text-align: left;
+  width: 600px;
+}
+.Belt {
+  height: 40vh;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.Navbar {
+  height: 15vh;
+  display: flex;
+  justify-content: space-between;
+  border-top: 0;
+  align-items: center;
+  padding: 5px;
+}
+
+.logo {
+  height: 65px;
+  width: 169px;
+  border: 40px;
+  padding: 5px;
+}
+
+.Link{
+  text-align: center;
+  font-family: Helvetica, sans-serif;
+  font-size: larger;
+  justify-content: space-between;
+  text-decoration: none;
+  color: #232323;
+  border: 10px;
+  padding: 5px;
+}
+
+.Links{
+  display: flex;
+  width: 40%;
+  justify-content: space-between;
+  text-decoration: none;
+}
+
+.btn_family {
+  background-color: green;
+  width: 250px;
+  font-family: Poppins;
+  font-size: larger;
+  border-color: whitesmoke;
+  border-width: 1px;
+  border-radius: 15px;
+  height: 50%;
+}
+
+.btn_family:hover {
+  background-color:burlywood;
+  color: whitesmoke;
+  transition: 0.5s;
+  border-color: whitesmoke;
+}
+
+.topic {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 700;
+  margin: 5px;
+}
+
+.detail {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 700;
+  margin: 5px;
+}
+
+.btn_family_card {
+  background-color: green;
+  color: black;
+  width: 250px;
+  font-family: Poppins;
+  font-size: larger;
+  border-color: white;
+  border-width: 5px;
+  border-radius: 15px;
+  height: 50%;
+  padding: 5px;
+}
+
+.btn_family_card:hover {
+  background-color: burlywood;
+  color: whitesmoke;
+  transition: 0.5s;
+}
+
+.borrowform {
+  height: 85vh;
+  display: flex;
+  background: whitesmoke;
+}
+
+.guidelines {
+  width: 40%;
+  display: flex;
+  flex-flow: column nowrap;
+  text-align: left;
+  margin-left: 10px;
+  padding: 5px;
+}
+
+.guidelines li {
+  font-family: Helvetica, sans-serif, Geneva, Tahoma, sans-serif;
+  margin: 10px;
+  font-size: 24px;
+  font-weight: 500;
+  font-family: "Poppins";
+  letter-spacing: 1px;
+}
+
+.form {
+  width: 60%;
+  text-align: left;
+  font-family: "Poppins";
+  margin-left: 10px;
+  padding: 5px;
+}
+
+.adminform {
+  width: 50%;
+  display: flex;
+  flex-flow: column;
+  font-family: "Poppins";
+  margin-left: 10px;
+  padding: 5px;
+  align-items: center;
+}
+
+.formcontainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+.hr_verticle {
+  border-left: 2px solid #232323;
+}
+
+.input_text {
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 80%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.form label {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: larger;
+  padding: 10px;
+}
+
+.form select {
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: medium;
+  padding: 10px;
+  width: 40%;
+}
+
+.input_checkbox {
+  width: 15px;
+  height: 15px;
+}
+
+.concent{
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: medium;
+  padding: 5px;
+}
+
+.dashboard_main{
+  display: flex;
+  height: 70vh;
+}
+
+.staked_part{
+  display: flex;
+  flex-flow: column nowrap;
+  width: 50%;
+  padding: 5px;
+  text-align: left;
+}
+
+.loaned_part{
+  display: flex;
+  flex-flow: column nowrap;
+  width: 50%;
+  padding: 5px;
+  text-align: left;
+}
+
+.Tile {
+  /* display: flex;
+  justify-content: space-between; */
+  height: 50px;
+  align-items: center;
+  padding: 2px;
+}
+.dashbutton{
+  width: 200px;
+  height: 40px;
+  margin: 5px;
+  color: #232323;
+  border: #232323;
+  font-family: "Poppins";
+  font-weight: 500;
+  border-radius: 5px;
+  background-color: green;
+}
+
+.dashbutton:hover {
+  color: white;
+  background-color: burlywood;
+  
+}
+
+button.dashbutton:disabled {
+  background-color: gray;
+  color: white;
+  cursor: not-allowed;
+}
+
+.hr {
+  padding: 0;
+  margin: 0;
+}
+
+.admindashboard {
+  height: 80vh;
+  display: flex;
+  flex-direction: row;
+}
+
+.functions {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.admindetails {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.adminbutton {
+  width: 60%;
+  height: 60px;
+  color: #232323;
+  border: #232323;
+  font-family: "Poppins";
+  font-weight: 500;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+  background-color: green;
+}
+
+.adminbutton:hover {
+  color: white;
+  background-color: burlywood;
+  
+}
+
+button.adminbutton:disabled {
+  background-color: gray;
+  color: white;
+  cursor: not-allowed;
+}
+
+.adminTable {
+  width: 90%;
+}
