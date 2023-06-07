@@ -98,10 +98,8 @@ const Stake = () => {
                   {" "}
                   Connect your meta mask wallet to deposit your assets and earn interest.
                 </h2>
+                <Button variant="danger"  onClick={(e)=>{metamaskConnect(e)}}>Connect your metamask wallet now.</Button>
               </div>
-              <button className="btn_family" onClick={(e) => {
-                metamaskConnect(e)
-              }}>Connect your metamask wallet now.</button>
             </div>
           ) : (
             <div>

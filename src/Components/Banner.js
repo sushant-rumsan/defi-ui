@@ -26,7 +26,7 @@ const Banner = () => {
         eraseDelay = "500"
       /></h2>
                 <p style={{width: "70%"}}>Decentralized Finance let you be in control of your own money instead of a third party bank. Earn interest in your asset, take loan and keep contolling your asset.</p>
-                <Button style={{width: "70%"}} variant="danger">Get started</Button>
+                <Link to="/stake"> <Button style={{width: "70%"}} variant="danger">Get started</Button></Link>
             </div>
             <div className='Banner-right'>
                 <div>

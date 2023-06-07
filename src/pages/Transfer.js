@@ -80,7 +80,7 @@ const Transfer = () => {
                         <h3> Seems like you have not connected your wallet.</h3>
                         <h2> Connect your meta mask wallet to transfer funds.</h2>
                     </div>
-                    <button className="btn_family" onClick={(e)=>{metamaskConnect(e)}}>Connect your metamask wallet now.</button>
+                    <Button variant="danger" onClick={(e)=>{metamaskConnect(e)}}>Connect your metamask wallet now.</Button>
                 </div>
                 :
                 <div>
