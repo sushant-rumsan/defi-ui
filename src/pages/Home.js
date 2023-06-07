@@ -7,7 +7,6 @@ const Home = () => {
     return(
         <div>
             <Navbar />
-            <hr className="hr"/>
             <Banner />
             <Belt />
         </div>

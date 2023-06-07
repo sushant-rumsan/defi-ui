@@ -1,38 +1,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap');
 
 .App {
-  text-align: center;
   font-family: "Poppins";
-  background: whitesmoke;
+  background-color: white;
 }
 
-
-
 .Banner {
-  height: 45vh;
+  height: 100vh;
   display: flex;
-  border: 0;
-  margin-bottom: 20px;
 }
 
 .Banner-left{
   display: flex;
-  flex-flow: column nowrap;
-  margin-top: 70px;
-  width: 60%;
+  gap: 7px;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
   height: 100%;
   padding-left: 80px;
-  align-items: baseline;
 }
 
 .Banner-right {
   display: flex;
   flex-direction: column;
-  width: 40%;
+  flex: 1;
   justify-content: center;
+  align-items: center;
   padding-right: 40px;
   text-align: right;
   margin-top: 20px;
+  /* background-color: rgb(255, 17, 17);
+  animation-name: backgroundAnimate;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  margin-right: 20px; */
+}
+
+
+@keyframes backgroundAnimate {
+  25% {background-color: orange;}
+  50% {background-color: rgb(255, 255, 0);}
+  75% {background-color: rgb(0, 208, 255);}
+  100% {background-color: rgb(241, 17, 17);}
 }
 
 .bannerh1 {
@@ -42,23 +52,6 @@
   margin: 2px;
 }
 
-.line2 {
-  font-family: Helvetica, sans-serif;
-  font-size: 30px;
-  text-align: left;
-  margin-bottom: 10px;
-  letter-spacing: 2px;
-}
-
-.line3 {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font-size: 32px;
-  font-weight: 700;
-  margin: 20px;
-  margin-left: 0px;
-  text-align: left;
-  width: 600px;
-}
 .Belt {
   height: 40vh;
   display: flex;
@@ -67,38 +60,34 @@
 }
 
 .Navbar {
-  height: 15vh;
+  height: 65px;
   display: flex;
   justify-content: space-between;
-  border-top: 0;
   align-items: center;
-  padding: 5px;
+  /* box-shadow: 5px 5px 15px rgb(243, 243, 243); */
+  padding: 0px 10px;
 }
 
-.logo {
-  height: 65px;
-  width: 169px;
-  border: 40px;
-  padding: 5px;
+.linksContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 50px;
 }
 
 .Link{
   text-align: center;
   font-family: Helvetica, sans-serif;
-  font-size: larger;
+  font-size: 12px;
   justify-content: space-between;
   text-decoration: none;
-  color: #232323;
+  color: #3f3f3f;
   border: 10px;
   padding: 5px;
+  margin-left: 15px;
 }
 
-.Links{
-  display: flex;
-  width: 40%;
-  justify-content: space-between;
-  text-decoration: none;
-}
+
 
 .btn_family {
   background-color: green;
@@ -118,16 +107,22 @@
   border-color: whitesmoke;
 }
 
+.descriptons{
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  width: 100%;
+  margin-top: 20px;
+}
+
 .topic {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: 700;
   margin: 5px;
+  font-weight: 600;
 }
 
 .detail {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: 700;
   margin: 5px;
+  text-align: center;
 }
 
 .btn_family_card {
@@ -150,35 +145,40 @@
 }
 
 .borrowform {
-  height: 85vh;
+  height: 100vh;
   display: flex;
-  background: whitesmoke;
 }
 
 .guidelines {
-  width: 40%;
+  flex: 2;
   display: flex;
-  flex-flow: column nowrap;
+  flex-direction: column;
   text-align: left;
-  margin-left: 10px;
-  padding: 5px;
+  padding-left: 15px;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 85, 0, 0.856);
+}
+
+.guidelines h4{
+  text-align: left;
+  width: 80%;
 }
 
 .guidelines li {
-  font-family: Helvetica, sans-serif, Geneva, Tahoma, sans-serif;
-  margin: 10px;
-  font-size: 24px;
-  font-weight: 500;
-  font-family: "Poppins";
-  letter-spacing: 1px;
+  margin: 7px;
+  font-size: 12px;
+  width: 80%;
 }
 
 .form {
-  width: 60%;
+  flex: 3;
   text-align: left;
-  font-family: "Poppins";
   margin-left: 10px;
   padding: 5px;
+  display: flex;
+  align-items: center;
+  margin-left: 50px;
 }
 
 .adminform {
@@ -197,50 +197,34 @@
   align-items: center;
   justify-content: space-around;
 }
-.hr_verticle {
-  border-left: 2px solid #232323;
-}
 
 .input_text {
-  padding: 10px;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  width: 80%;
+  padding: 5px;
+  width: 100%;
+  margin: 10px 0;
   border: 1px solid #ddd;
   border-radius: 4px;
   box-sizing: border-box;
 }
 
-.form label {
-  font-family: "Poppins";
-  font-weight: 500;
-  font-size: larger;
-  padding: 10px;
-}
 
 .form select {
-  font-family: "Poppins";
-  font-weight: 400;
-  font-size: medium;
-  padding: 10px;
   width: 40%;
 }
 
-.input_checkbox {
-  width: 15px;
-  height: 15px;
-}
 
 .concent{
-  font-family: "Poppins";
-  font-weight: 500;
-  font-size: medium;
+  font-size: 0.8em;
   padding: 5px;
 }
 
 .dashboard_main{
   display: flex;
-  height: 70vh;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  margin: auto;
 }
 
 .staked_part{
@@ -259,13 +243,7 @@
   text-align: left;
 }
 
-.Tile {
-  /* display: flex;
-  justify-content: space-between; */
-  height: 50px;
-  align-items: center;
-  padding: 2px;
-}
+
 .dashbutton{
   width: 200px;
   height: 40px;
@@ -345,3 +323,17 @@ button.adminbutton:disabled {
 .adminTable {
   width: 90%;
 }
+
+/* Pig Animation  */
+
+/* .animatePig{
+  animation-name: animatePig;
+  animation-duration: 2s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes animatePig {
+  from {margin-left: -100px;}
+  to {margin-left: 200px;}
+} */

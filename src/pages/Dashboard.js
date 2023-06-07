@@ -5,6 +5,7 @@ import { useContract, useContractRead } from "@thirdweb-dev/react";
 import Navbar from "../Components/Navbar";
 import { ethers } from "ethers";
 import defiAbi from "../abis/defi-abi.json";
+import { Button } from "react-bootstrap";
 
 const Dashboard = () => {
 
@@ -59,14 +60,9 @@ const Dashboard = () => {
                 </div>
                 :
                 <div>
-                    <div>
-                        <h4>Connected Wallet:</h4> {account} 
-                        <hr/>
-                    </div>
                     <div className="dashboard_main">
                         <div className="staked_part">
-                            <h2> Your Assets </h2>
-                            <hr/>
+                            <h4> Your Assets </h4>
                             <table className="table">
                                 <tbody>
                                     <tr>
@@ -79,7 +75,7 @@ const Dashboard = () => {
                                     {data === null ? <td>...</td> : <td>{data}</td>}
                                     <td>
                                         <Link to="/stake">
-                                            <button className="dashbutton">Stake More Assets</button>
+                                            <Button variant="danger">Stake More Assets</Button>
                                         </Link>
                                     </td>
                                     </tr>
@@ -87,14 +83,14 @@ const Dashboard = () => {
                                     <td>Total Interest Accured</td>
                                     <td>345</td>
                                     <td>
-                                        <button className="dashbutton">Withdraw Interest</button>
+                                        <Button variant="danger">Withdraw Interest</Button>
                                     </td>
                                     </tr>
                                     <tr>                                
                                     <td>Withdrawable Assets</td>
                                     <td>345</td>                                    
                                     <td>
-                                        <button className="dashbutton" onClick={() => handleWithdraw()}>Withdraw USDC</button>
+                                        <Button variant="danger" onClick={() => handleWithdraw()}>Withdraw USDC</Button>
                                     </td>
                                     </tr>
                                 </tbody>
@@ -104,8 +100,7 @@ const Dashboard = () => {
                         </div>
                         <hr className="hr_verticle"/>
                         <div className="loaned_part">
-                            <h2> Your Loans</h2>
-                            <hr/>                        
+                            <h4> Your Loans</h4>                      
                             <table class="table">
                                 <tbody>
                                     <tr>
@@ -117,7 +112,7 @@ const Dashboard = () => {
                                     <td>341 ETH</td>
                                     <td>
                                         <Link to="/stake">
-                                            <button className="dashbutton">Increase Collateral</button>
+                                            <Button variant="primary">Increase Collateral</Button>
                                         </Link>
                                     </td>
                                     </tr>
@@ -126,7 +121,7 @@ const Dashboard = () => {
                                     <td>$45.875</td>
                                     <td>
                                         <Link to="/borrow">
-                                        <button className="dashbutton">Take more loans</button>
+                                        <Button variant="primary">Take more loans</Button>
                                         </Link>
                                     </td>
                                     </tr>
@@ -134,7 +129,7 @@ const Dashboard = () => {
                                     <td>Due Payment</td>
                                     <td>$45.875</td>
                                     <td>
-                                        <button className="dashbutton">Pay Now</button>
+                                        <Button variant="primary">Pay Now</Button>
                                     </td>
                                     </tr>
                                 </tbody>

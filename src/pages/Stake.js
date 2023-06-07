@@ -5,6 +5,7 @@ import Navbar from "../Components/Navbar";
 import usdcAbi from "../abis/usdc-abi.json";
 import defiAbi from "../abis/defi-abi.json";
 import { ethers } from "ethers";
+import { Button } from "react-bootstrap";
 
 const Stake = () => {
   const { metamaskConnect, account, signer, provider } = useContext(EthContext);
@@ -78,8 +79,7 @@ const Stake = () => {
       <hr className="hr"></hr>
       <div className="borrowform">
         <div className="guidelines">
-          <h1>STAKE</h1>
-          <ul>
+          <h4>STAKE</h4>
             <li>Stake USDT and earn interest.</li>
             <li>Stake rate is 7.5%.</li>
             <li>
@@ -87,7 +87,6 @@ const Stake = () => {
               ethereum staked in the pool.
             </li>
             <li>Interest is paid automatically every week in ethereum account.</li>
-          </ul>
         </div>
         <hr className="hr_verticle" />
         <div className="form">
@@ -106,28 +105,25 @@ const Stake = () => {
             </div>
           ) : (
             <div>
-              <h4>Connected Wallet:</h4> {account}
-              <hr />
               <div>
                 <label>Amount to Stake</label>
                 <input
                   className="input_text"
                   type="number"
-                  placeholder="Amount in USD"
                   value={amount}
                   onChange={handleAmountChange}
                 />
               </div>
-              { stakeAmount ? <p>{stakeAmount} USDC WEI</p> : <p> 0 USDC WEI</p>}
-              <div className="form-check">
+              { stakeAmount ? <p style={{fontSize: "0.7em"}}>{stakeAmount} USDC WEI</p> : <p style={{fontSize: "0.7em"}}> 0 USDC WEI</p>}
+              <div>
                 <input className="input_checkbox" type="checkbox" value="" id="flexCheckDefault" onChange={handleTermsAgreedChange}/>
                 <label>
-                  <p className="concent">I agree to the terms and conditions.</p>
+                  <p className="concent">I have read and agree to the terms and conditions.</p>
                 </label>
               </div>
-              <button className="dashbutton" onClick={() => callSenderApprove( stakeAmount ) } disabled={disabled}>
+              <Button variant="danger" onClick={() => callSenderApprove( stakeAmount ) } disabled={disabled}>
                 Stake Now
-              </button>
+              </Button>
               {message && <p>{message}</p>}
             </div>
           )}

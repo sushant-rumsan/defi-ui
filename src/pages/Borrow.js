@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { EthContext } from "../context/Ethstate";
 import { Link } from "react-router-dom";
 import Navbar from "../Components/Navbar";
+import { Button } from "react-bootstrap";
 
 
 const Borrow = () => {
@@ -40,16 +41,15 @@ const Borrow = () => {
         <hr className="hr"/>
         <div className="borrowform">
             <div className="guidelines">
-                <h1>BORROW</h1>
-                <ul>
+                <h4>BORROW</h4>
+               
                     <li>Deposit Ethereum as collateral and borrow USDT.</li>
                     <li>Borrow rate is 8%.</li>
                     <li>Assest will be liquidated if interest not paid on time or value of collateral drops below borrow rate.</li>
                     <li>Rates are dynamic and subject to change according to amount of ethereum staked in the pool.</li>
-                </ul>
+                
 
             </div>
-            <hr className="hr_verticle"/>
             <div className="form">
                 { (!account)?
                 <div>
@@ -61,26 +61,22 @@ const Borrow = () => {
                 </div>
                 :
                 <div>
-                    <h4>Connected Wallet:</h4> {account} 
-                    <hr/>
                     <div>
-                        <label>Amount to Stake</label>
+                        <label>Amount to Stake</label><br />
                         <input
                             className="input_text"
                             type="number"
-                            placeholder="Amount in ETH"
                             onChange={handleAmountChange} />
                     </div>
-                    { ethBorrow ? <p>{ethBorrow} ETH Wei</p> : <p>0 ETH Wei</p>}
+                    { ethBorrow ? <p style={{fontSize: "0.7em"}}>{ethBorrow} ETH Wei</p> : <p style={{fontSize: "0.7em"}}>0 ETH Wei</p>}
                     <div>
-                        <label>Time Period of the loan</label>
+                        <label>Time Period (in years) </label><br />
                         <input
                             className="input_text"
                             type="number"
-                            placeholder="in year(s)"
                             onChange={handleTimeChange} />
                     </div>
-                    <div class="form-check">
+                    <div>
                         <input
                             className="input_checkbox"
                             type="checkbox"
@@ -88,14 +84,14 @@ const Borrow = () => {
                             id="flexCheckDefault"
                             onChange={handleTermsAgreedChange}/>
                         <label>
-                            <p className="concent">I agree to the terms and conditions.</p>
-                        </label>
+                            <p className="concent">I have read and agree to the terms and conditions.</p>
+                        </label><br />
                     </div>
                     <Link to={{ 
                         pathname: "/borrow/borrowconfirm",
                         search: `?amount=${amount}&time=${time}&ethAmount=${ethBorrow}`
                         }}>
-                        <button className="dashbutton" disabled={disabled}>Borrow Now</button>
+                        <Button variant="danger" disabled={disabled}>Borrow Now</Button>
                     </Link>
                 </div>
                 }

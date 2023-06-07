@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { EthContext } from "../context/Ethstate";
 import { useContract, useContractWrite } from "@thirdweb-dev/react";
 import Navbar from "../Components/Navbar";
+import { Button } from "react-bootstrap";
 
 const Transfer = () => {
 
@@ -66,16 +67,12 @@ const Transfer = () => {
             <hr className="hr"/>
         <div className="borrowform">
             <div className="guidelines">
-                <h1>TRANSFER</h1>
-                <ul>
+                <h4>TRANSFER</h4>
                     <li>Transfer funds from your account to any other address easily and securely.</li>
                     <li>High gas fee equals faster transactions.</li>
                     <li>Gas fees are deducted automaticallys from your wallet when the transfer transaction is performed.</li>
                     <li>Gas fees can be dynamic depending on the amount of transaction traffic.</li>
-                </ul>
-
             </div>
-            <hr className="hr_verticle"/>
             <div className="form">
                 { (!account)?
                 <div>
@@ -87,13 +84,11 @@ const Transfer = () => {
                 </div>
                 :
                 <div>
-                    <h4>Connected Wallet:</h4> {account} 
-                    <hr/>
                     <div>
                         <label>Recepient's Wallet Address</label>
                         <input 
                             className="input_text" 
-                            type="string"
+                            type="text"
                             value={recipient}
                             onChange={handleRecipientChange}
                         />
@@ -113,14 +108,14 @@ const Transfer = () => {
                         <option value="2">Medium Gas</option>
                         <option value="3">Low Gas</option>
                     </select>
-                    <p>If you donot select any gas, the most suitable gas will be automatically selected for you.</p>
-                    <div class="form-check">
+                    <p style={{fontSize: "0.7em"}}>If you donot select any gas, the most suitable gas will be automatically selected for you.</p>
+                    <div>
                         <input className="input_checkbox" type="checkbox" value="" id="flexCheckDefault" onChange={handleTermsAgreedChange}/>
                         <label>
                             <p className="concent">I agree to the terms and conditions.</p>
                         </label>
                     </div>
-                    <button className="dashbutton" onClick={() => callSenderApprove(account, recipient, amount) } disabled={disabled}>Transfer Now</button>
+                    <Button variant="danger" onClick={() => callSenderApprove(account, recipient, amount) } disabled={disabled}>Transfer Now</Button>
                 </div>
                 }
             </div>
