@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap');
 
+@media only screen and (max-width: 600px) {
+  #root {
+    display: none;
+  }
+  body::before{
+    content: "This application is only available for desktop device, mobile version is releasing soon...";
+    font-size: 3em;
+  }
+}
+
 .App {
   font-family: "Poppins";
   background-color: white;
